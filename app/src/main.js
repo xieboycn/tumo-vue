@@ -4,8 +4,11 @@ import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import '@/styles/font.css'
 import locale from 'element-ui/lib/locale/lang/en' // lang i18n
-
+import VueMaterial from "vue-material";
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
 import '@/styles/index.scss' // global css
 
 import App from './App'
@@ -17,7 +20,7 @@ import '@/permission' // permission control
 
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })
-
+Vue.use(VueMaterial);
 Vue.config.productionTip = false
 
 new Vue({
