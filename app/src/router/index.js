@@ -6,6 +6,7 @@ Vue.use(Router)
 /* Layout */
 import Layout from '@/layout'
 import SiteLayout from '@/siteviews/Layout'
+import Frame from  '@/siteviews/Frame'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -190,6 +191,14 @@ export const constantRoutes = [
     children: [{
       path: '',
       component: () => import('@/siteviews/index/index'),
+    }]
+  },
+  {
+    path: '/test',
+    component: Frame,
+    children: [{
+      path: '',
+      component: () => import('@/siteviews/Frame'),
     }]
   },
 
